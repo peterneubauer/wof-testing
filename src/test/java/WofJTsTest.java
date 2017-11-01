@@ -49,11 +49,7 @@ public class WofJTsTest {
             geomMap.put("type", geometryObj.get("type"));
             geomMap.put("coordinates", geometryObj.get("coordinates"));
             String geometry = gson.toJson(geomMap);
-            Shape shape = shapeReader.read(geometry);
-
-            // parse Geometry from Feature
-//            GeoJSONReader reader = new GeoJSONReader();
-//            reader.read(feature.getGeometry());
+            shapeReader.read(geometry);
             count++;
         }
 
